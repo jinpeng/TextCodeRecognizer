@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6020598322D8CD410092500D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020598222D8CD410092500D /* AppDelegate.m */; };
+		6020598622D8CD410092500D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020598522D8CD410092500D /* ViewController.m */; };
+		6020598922D8CD410092500D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6020598722D8CD410092500D /* Main.storyboard */; };
+		6020598B22D8CD420092500D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6020598A22D8CD420092500D /* Assets.xcassets */; };
+		6020598E22D8CD420092500D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6020598C22D8CD420092500D /* LaunchScreen.storyboard */; };
+		6020599122D8CD420092500D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020599022D8CD420092500D /* main.m */; };
+		6020599B22D8CD420092500D /* TextCodeRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020599A22D8CD420092500D /* TextCodeRecognizerTests.m */; };
+		602059A622D8CD420092500D /* TextCodeRecognizerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602059A522D8CD420092500D /* TextCodeRecognizerUITests.m */; };
+		602059E622D9512E0092500D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 602059E522D9512E0092500D /* GoogleService-Info.plist */; };
+		602059E922D9DFAE0092500D /* TextCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 602059E822D9DFAE0092500D /* TextCodeScanViewController.m */; };
+		606A35BA22DA2D3100693542 /* scanSuccess.wav in Resources */ = {isa = PBXBuildFile; fileRef = 606A35B922DA2D3100693542 /* scanSuccess.wav */; };
+		74C8951009DB938924D97CED /* Pods_TextCodeRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DCD930F6C8A49445AF656ED /* Pods_TextCodeRecognizer.framework */; };
+		89E758FE9C70E9A5B9C82C89 /* Pods_TextCodeRecognizerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07DD270F443AB5682F440AA /* Pods_TextCodeRecognizerUITests.framework */; };
+		F8D0E989B37832ACAE88EA89 /* Pods_TextCodeRecognizerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7A5D9A4BDA561A772D8C4F /* Pods_TextCodeRecognizerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6020599722D8CD420092500D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6020597622D8CD410092500D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6020597D22D8CD410092500D;
+			remoteInfo = TextCodeRecognizer;
+		};
+		602059A222D8CD420092500D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6020597622D8CD410092500D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6020597D22D8CD410092500D;
+			remoteInfo = TextCodeRecognizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12ADA2354FB289E345619604 /* Pods-TextCodeRecognizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizerTests.debug.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizerTests/Pods-TextCodeRecognizerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E6B38F7B2EDDE1E7009706A /* Pods-TextCodeRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizerTests.release.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizerTests/Pods-TextCodeRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FED8F8AA0FC661FDA70F864 /* Pods-TextCodeRecognizerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizerUITests/Pods-TextCodeRecognizerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6020597E22D8CD410092500D /* TextCodeRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextCodeRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6020598122D8CD410092500D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6020598222D8CD410092500D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6020598422D8CD410092500D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6020598522D8CD410092500D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6020598822D8CD410092500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6020598A22D8CD420092500D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6020598D22D8CD420092500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6020598F22D8CD420092500D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6020599022D8CD420092500D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6020599622D8CD420092500D /* TextCodeRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextCodeRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6020599A22D8CD420092500D /* TextCodeRecognizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCodeRecognizerTests.m; sourceTree = "<group>"; };
+		6020599C22D8CD420092500D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602059A122D8CD420092500D /* TextCodeRecognizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextCodeRecognizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		602059A522D8CD420092500D /* TextCodeRecognizerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCodeRecognizerUITests.m; sourceTree = "<group>"; };
+		602059A722D8CD420092500D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602059E522D9512E0092500D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		602059E722D9DFAE0092500D /* TextCodeScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCodeScanViewController.h; sourceTree = "<group>"; };
+		602059E822D9DFAE0092500D /* TextCodeScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextCodeScanViewController.m; sourceTree = "<group>"; };
+		606A35B922DA2D3100693542 /* scanSuccess.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanSuccess.wav; sourceTree = "<group>"; };
+		8DCD930F6C8A49445AF656ED /* Pods_TextCodeRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextCodeRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F6EEB8B0D888DE0539EDEE9 /* Pods-TextCodeRecognizerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizerUITests.release.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizerUITests/Pods-TextCodeRecognizerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A460F31DC8FA06D2D3D29D9A /* Pods-TextCodeRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
+		A516366EAEE2C43EAAA434B7 /* Pods-TextCodeRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextCodeRecognizer.release.xcconfig"; path = "Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer.release.xcconfig"; sourceTree = "<group>"; };
+		DD7A5D9A4BDA561A772D8C4F /* Pods_TextCodeRecognizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextCodeRecognizerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E07DD270F443AB5682F440AA /* Pods_TextCodeRecognizerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextCodeRecognizerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6020597B22D8CD410092500D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C8951009DB938924D97CED /* Pods_TextCodeRecognizer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599322D8CD420092500D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D0E989B37832ACAE88EA89 /* Pods_TextCodeRecognizerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599E22D8CD420092500D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E758FE9C70E9A5B9C82C89 /* Pods_TextCodeRecognizerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		206F79BDD03C352912FAE23E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A460F31DC8FA06D2D3D29D9A /* Pods-TextCodeRecognizer.debug.xcconfig */,
+				A516366EAEE2C43EAAA434B7 /* Pods-TextCodeRecognizer.release.xcconfig */,
+				12ADA2354FB289E345619604 /* Pods-TextCodeRecognizerTests.debug.xcconfig */,
+				2E6B38F7B2EDDE1E7009706A /* Pods-TextCodeRecognizerTests.release.xcconfig */,
+				3FED8F8AA0FC661FDA70F864 /* Pods-TextCodeRecognizerUITests.debug.xcconfig */,
+				9F6EEB8B0D888DE0539EDEE9 /* Pods-TextCodeRecognizerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6020597522D8CD410092500D = {
+			isa = PBXGroup;
+			children = (
+				6020598022D8CD410092500D /* TextCodeRecognizer */,
+				6020599922D8CD420092500D /* TextCodeRecognizerTests */,
+				602059A422D8CD420092500D /* TextCodeRecognizerUITests */,
+				6020597F22D8CD410092500D /* Products */,
+				206F79BDD03C352912FAE23E /* Pods */,
+				7FCE0DED3C3EB4B4548AC814 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6020597F22D8CD410092500D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6020597E22D8CD410092500D /* TextCodeRecognizer.app */,
+				6020599622D8CD420092500D /* TextCodeRecognizerTests.xctest */,
+				602059A122D8CD420092500D /* TextCodeRecognizerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6020598022D8CD410092500D /* TextCodeRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				606A35B922DA2D3100693542 /* scanSuccess.wav */,
+				6020598122D8CD410092500D /* AppDelegate.h */,
+				6020598222D8CD410092500D /* AppDelegate.m */,
+				6020598422D8CD410092500D /* ViewController.h */,
+				6020598522D8CD410092500D /* ViewController.m */,
+				6020598722D8CD410092500D /* Main.storyboard */,
+				6020598A22D8CD420092500D /* Assets.xcassets */,
+				6020598C22D8CD420092500D /* LaunchScreen.storyboard */,
+				6020598F22D8CD420092500D /* Info.plist */,
+				602059E522D9512E0092500D /* GoogleService-Info.plist */,
+				6020599022D8CD420092500D /* main.m */,
+				602059E722D9DFAE0092500D /* TextCodeScanViewController.h */,
+				602059E822D9DFAE0092500D /* TextCodeScanViewController.m */,
+			);
+			path = TextCodeRecognizer;
+			sourceTree = "<group>";
+		};
+		6020599922D8CD420092500D /* TextCodeRecognizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6020599A22D8CD420092500D /* TextCodeRecognizerTests.m */,
+				6020599C22D8CD420092500D /* Info.plist */,
+			);
+			path = TextCodeRecognizerTests;
+			sourceTree = "<group>";
+		};
+		602059A422D8CD420092500D /* TextCodeRecognizerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				602059A522D8CD420092500D /* TextCodeRecognizerUITests.m */,
+				602059A722D8CD420092500D /* Info.plist */,
+			);
+			path = TextCodeRecognizerUITests;
+			sourceTree = "<group>";
+		};
+		7FCE0DED3C3EB4B4548AC814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DCD930F6C8A49445AF656ED /* Pods_TextCodeRecognizer.framework */,
+				DD7A5D9A4BDA561A772D8C4F /* Pods_TextCodeRecognizerTests.framework */,
+				E07DD270F443AB5682F440AA /* Pods_TextCodeRecognizerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6020597D22D8CD410092500D /* TextCodeRecognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 602059AA22D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizer" */;
+			buildPhases = (
+				D556B9FD30D89C89FC6667A1 /* [CP] Check Pods Manifest.lock */,
+				6020597A22D8CD410092500D /* Sources */,
+				6020597B22D8CD410092500D /* Frameworks */,
+				6020597C22D8CD410092500D /* Resources */,
+				F093234FB7A4159086476045 /* [CP] Embed Pods Frameworks */,
+				DBC64C7B666ED3CA635D18A8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextCodeRecognizer;
+			productName = TextCodeRecognizer;
+			productReference = 6020597E22D8CD410092500D /* TextCodeRecognizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6020599522D8CD420092500D /* TextCodeRecognizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 602059AD22D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizerTests" */;
+			buildPhases = (
+				1CEDEC0FF69359F332159958 /* [CP] Check Pods Manifest.lock */,
+				6020599222D8CD420092500D /* Sources */,
+				6020599322D8CD420092500D /* Frameworks */,
+				6020599422D8CD420092500D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6020599822D8CD420092500D /* PBXTargetDependency */,
+			);
+			name = TextCodeRecognizerTests;
+			productName = TextCodeRecognizerTests;
+			productReference = 6020599622D8CD420092500D /* TextCodeRecognizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		602059A022D8CD420092500D /* TextCodeRecognizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 602059B022D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizerUITests" */;
+			buildPhases = (
+				4DD596F6A734CEC2968A431E /* [CP] Check Pods Manifest.lock */,
+				6020599D22D8CD420092500D /* Sources */,
+				6020599E22D8CD420092500D /* Frameworks */,
+				6020599F22D8CD420092500D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				602059A322D8CD420092500D /* PBXTargetDependency */,
+			);
+			name = TextCodeRecognizerUITests;
+			productName = TextCodeRecognizerUITests;
+			productReference = 602059A122D8CD420092500D /* TextCodeRecognizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6020597622D8CD410092500D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = jinpeng;
+				TargetAttributes = {
+					6020597D22D8CD410092500D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					6020599522D8CD420092500D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6020597D22D8CD410092500D;
+					};
+					602059A022D8CD420092500D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6020597D22D8CD410092500D;
+					};
+				};
+			};
+			buildConfigurationList = 6020597922D8CD410092500D /* Build configuration list for PBXProject "TextCodeRecognizer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6020597522D8CD410092500D;
+			productRefGroup = 6020597F22D8CD410092500D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6020597D22D8CD410092500D /* TextCodeRecognizer */,
+				6020599522D8CD420092500D /* TextCodeRecognizerTests */,
+				602059A022D8CD420092500D /* TextCodeRecognizerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6020597C22D8CD410092500D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606A35BA22DA2D3100693542 /* scanSuccess.wav in Resources */,
+				6020598E22D8CD420092500D /* LaunchScreen.storyboard in Resources */,
+				602059E622D9512E0092500D /* GoogleService-Info.plist in Resources */,
+				6020598B22D8CD420092500D /* Assets.xcassets in Resources */,
+				6020598922D8CD410092500D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599422D8CD420092500D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599F22D8CD420092500D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CEDEC0FF69359F332159958 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextCodeRecognizerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD596F6A734CEC2968A431E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextCodeRecognizerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D556B9FD30D89C89FC6667A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextCodeRecognizer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC64C7B666ED3CA635D18A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F093234FB7A4159086476045 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextCodeRecognizer/Pods-TextCodeRecognizer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6020597A22D8CD410092500D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6020598622D8CD410092500D /* ViewController.m in Sources */,
+				6020599122D8CD420092500D /* main.m in Sources */,
+				6020598322D8CD410092500D /* AppDelegate.m in Sources */,
+				602059E922D9DFAE0092500D /* TextCodeScanViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599222D8CD420092500D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6020599B22D8CD420092500D /* TextCodeRecognizerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6020599D22D8CD420092500D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				602059A622D8CD420092500D /* TextCodeRecognizerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6020599822D8CD420092500D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6020597D22D8CD410092500D /* TextCodeRecognizer */;
+			targetProxy = 6020599722D8CD420092500D /* PBXContainerItemProxy */;
+		};
+		602059A322D8CD420092500D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6020597D22D8CD410092500D /* TextCodeRecognizer */;
+			targetProxy = 602059A222D8CD420092500D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6020598722D8CD410092500D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6020598822D8CD410092500D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6020598C22D8CD420092500D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6020598D22D8CD420092500D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		602059A822D8CD420092500D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		602059A922D8CD420092500D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		602059AB22D8CD420092500D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A460F31DC8FA06D2D3D29D9A /* Pods-TextCodeRecognizer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		602059AC22D8CD420092500D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A516366EAEE2C43EAAA434B7 /* Pods-TextCodeRecognizer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		602059AE22D8CD420092500D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12ADA2354FB289E345619604 /* Pods-TextCodeRecognizerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextCodeRecognizer.app/TextCodeRecognizer";
+			};
+			name = Debug;
+		};
+		602059AF22D8CD420092500D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6B38F7B2EDDE1E7009706A /* Pods-TextCodeRecognizerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextCodeRecognizer.app/TextCodeRecognizer";
+			};
+			name = Release;
+		};
+		602059B122D8CD420092500D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FED8F8AA0FC661FDA70F864 /* Pods-TextCodeRecognizerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TextCodeRecognizer;
+			};
+			name = Debug;
+		};
+		602059B222D8CD420092500D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F6EEB8B0D888DE0539EDEE9 /* Pods-TextCodeRecognizerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4USBE2XJV5;
+				INFOPLIST_FILE = TextCodeRecognizerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongjinpeng.TextCodeRecognizerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TextCodeRecognizer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6020597922D8CD410092500D /* Build configuration list for PBXProject "TextCodeRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602059A822D8CD420092500D /* Debug */,
+				602059A922D8CD420092500D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		602059AA22D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602059AB22D8CD420092500D /* Debug */,
+				602059AC22D8CD420092500D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		602059AD22D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602059AE22D8CD420092500D /* Debug */,
+				602059AF22D8CD420092500D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		602059B022D8CD420092500D /* Build configuration list for PBXNativeTarget "TextCodeRecognizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602059B122D8CD420092500D /* Debug */,
+				602059B222D8CD420092500D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6020597622D8CD410092500D /* Project object */;
+}
