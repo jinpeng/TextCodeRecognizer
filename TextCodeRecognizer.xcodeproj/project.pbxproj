@@ -11,7 +11,6 @@
 		6020598622D8CD410092500D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020598522D8CD410092500D /* ViewController.m */; };
 		6020598922D8CD410092500D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6020598722D8CD410092500D /* Main.storyboard */; };
 		6020598B22D8CD420092500D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6020598A22D8CD420092500D /* Assets.xcassets */; };
-		6020598E22D8CD420092500D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6020598C22D8CD420092500D /* LaunchScreen.storyboard */; };
 		6020599122D8CD420092500D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020599022D8CD420092500D /* main.m */; };
 		6020599B22D8CD420092500D /* TextCodeRecognizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6020599A22D8CD420092500D /* TextCodeRecognizerTests.m */; };
 		602059A622D8CD420092500D /* TextCodeRecognizerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 602059A522D8CD420092500D /* TextCodeRecognizerUITests.m */; };
@@ -51,7 +50,6 @@
 		6020598522D8CD410092500D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6020598822D8CD410092500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6020598A22D8CD420092500D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6020598D22D8CD420092500D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6020598F22D8CD420092500D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6020599022D8CD420092500D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6020599622D8CD420092500D /* TextCodeRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextCodeRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +143,6 @@
 				6020598522D8CD410092500D /* ViewController.m */,
 				6020598722D8CD410092500D /* Main.storyboard */,
 				6020598A22D8CD420092500D /* Assets.xcassets */,
-				6020598C22D8CD420092500D /* LaunchScreen.storyboard */,
 				6020598F22D8CD420092500D /* Info.plist */,
 				602059E522D9512E0092500D /* GoogleService-Info.plist */,
 				6020599022D8CD420092500D /* main.m */,
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				606A35BA22DA2D3100693542 /* scanSuccess.wav in Resources */,
-				6020598E22D8CD420092500D /* LaunchScreen.storyboard in Resources */,
 				602059E622D9512E0092500D /* GoogleService-Info.plist in Resources */,
 				6020598B22D8CD420092500D /* Assets.xcassets in Resources */,
 				6020598922D8CD410092500D /* Main.storyboard in Resources */,
@@ -470,14 +466,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6020598C22D8CD420092500D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6020598D22D8CD420092500D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -598,6 +586,7 @@
 			baseConfigurationReference = A460F31DC8FA06D2D3D29D9A /* Pods-TextCodeRecognizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4USBE2XJV5;
 				INFOPLIST_FILE = TextCodeRecognizer/Info.plist;
@@ -616,6 +605,7 @@
 			baseConfigurationReference = A516366EAEE2C43EAAA434B7 /* Pods-TextCodeRecognizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4USBE2XJV5;
 				INFOPLIST_FILE = TextCodeRecognizer/Info.plist;

@@ -34,12 +34,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Woj-VV-Sbx">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Woj-VV-Sbx">
                                 <rect key="frame" x="40" y="332" width="294.66666666666669" height="101.66666666666667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入书封底或者学习卡上印的验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43u-dV-Xhf">
                                         <rect key="frame" x="0.0" y="0.0" width="294.66666666666669" height="20.333333333333332"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.329999999999998" id="0MJ-vG-7mi"/>
+                                            <constraint firstAttribute="width" constant="294.67000000000002" id="fnD-te-1q6"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -47,20 +51,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmj-d9-ind">
                                         <rect key="frame" x="0.0" y="29.333333333333332" width="294.66666666666669" height="33.333333333333343"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-eE-Mio">
-                                                <rect key="frame" x="0.0" y="0.0" width="251.66666666666666" height="33.333333333333336"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx" adjustsFontSizeToFit="NO" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="VgL-eE-Mio">
+                                                <rect key="frame" x="0.0" y="0.0" width="224.66666666666666" height="33.333333333333336"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartInsertDeleteType="no"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mke-Gp-4OP">
-                                                <rect key="frame" x="251.66666666666663" y="0.0" width="43" height="33.333333333333336"/>
+                                                <rect key="frame" x="224.66666666666663" y="0.0" width="70" height="33.333333333333336"/>
                                                 <state key="normal" image="CameraButton"/>
                                                 <connections>
                                                     <action selector="ScanStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MY1-GQ-JIR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Mke-Gp-4OP" firstAttribute="leading" secondItem="VgL-eE-Mio" secondAttribute="trailing" constant="2" id="5pL-aX-B5D"/>
+                                            <constraint firstItem="Mke-Gp-4OP" firstAttribute="height" secondItem="VgL-eE-Mio" secondAttribute="height" id="IQo-QW-2Gn"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xP7-5z-SUZ">
                                         <rect key="frame" x="0.0" y="71.666666666666671" width="294.66666666666669" height="30"/>

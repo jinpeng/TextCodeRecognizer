@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [NSThread sleepForTimeInterval:2];
 }
 
 - (IBAction)ScanStart:(id)sender {
