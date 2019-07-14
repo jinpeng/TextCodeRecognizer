@@ -20,7 +20,7 @@
     FIRVisionTextRecognizer *textRecognizer;
 }
 @property (nonatomic, assign) CGFloat m_width; //扫描框宽度
-@property (nonatomic, assign) CGFloat m_higth; //扫描框高度
+@property (nonatomic, assign) CGFloat m_height; //扫描框高度
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureDeviceInput *videoInput;
 @property (nonatomic, strong) AVCaptureVideoDataOutput *captureVideoDataOutput;
@@ -44,7 +44,7 @@
     
     // Default values
     self.m_width = (SCREEN_WIDTH - 40);
-    self.m_higth = 80.0;
+    self.m_height = 80.0;
     recognizedText = @"";
     
     // Initialize MLKit text recognizer
@@ -108,7 +108,7 @@
         [[self.previewLayer connection] setVideoOrientation:AVCaptureVideoOrientationPortraitUpsideDown];
     }
     
-    self.previewLayer.frame = CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT);
+    self.previewLayer.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     [self.previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     
@@ -136,16 +136,16 @@
     [button addTarget:self action:@selector(clickedFinishBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     // Adjust focus
-    int flags =NSKeyValueObservingOptionNew;
+    int flags = NSKeyValueObservingOptionNew;
     [device addObserver:self forKeyPath:@"adjustingFocus" options:flags context:nil];
 }
 
 - (void)initScanView
 {
     // 中间空心洞的区域
-    CGRect cutRect = CGRectMake((SCREEN_WIDTH - _m_width)/2.0,m_scanViewY, _m_width, _m_higth);
+    CGRect cutRect = CGRectMake((SCREEN_WIDTH - _m_width)/2.0, m_scanViewY, _m_width, _m_height);
     
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0,0, SCREEN_WIDTH,SCREEN_HEIGHT)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0,0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     // 挖空心洞 显示区域
     UIBezierPath *cutRectPath = [UIBezierPath bezierPathWithRect:cutRect];
     
@@ -156,7 +156,7 @@
     CAShapeLayer *fillLayer = [CAShapeLayer layer];
     fillLayer.path = path.CGPath;
     fillLayer.fillRule = kCAFillRuleEvenOdd;
-    fillLayer.opacity = 0.6;//透明度
+    fillLayer.opacity = 0.6; // 透明度
     fillLayer.backgroundColor = [UIColor blackColor].CGColor;
     [self.view.layer addSublayer:fillLayer];
     
@@ -201,7 +201,7 @@
                                                                      lineWidth)]];
     
     CAShapeLayer *pathLayer = [CAShapeLayer layer];
-    pathLayer.path = linePath.CGPath;// 从贝塞尔曲线获取到形状
+    pathLayer.path = linePath.CGPath; // 从贝塞尔曲线获取到形状
     pathLayer.fillColor = [UIColor colorWithRed:0. green:0.655 blue:0.905 alpha:1.0].CGColor; // 闭环填充的颜色
     [self.view.layer addSublayer:pathLayer];
     
@@ -218,6 +218,60 @@
         isFocus = adjustingFocus;
         NSLog(@"Is adjusting focus? %@", adjustingFocus ?@"YES":@"NO");
     }
+}
+
+// Create a UIImage from sample buffer data
+- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer
+{
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    // Lock the base address of the pixel buffer
+    CVPixelBufferLockBaseAddress(imageBuffer,0);
+    
+    // Get the number of bytes per row for the pixel buffer
+    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+    // Get the pixel buffer width and height
+    size_t width = CVPixelBufferGetWidth(imageBuffer);
+    size_t height = CVPixelBufferGetHeight(imageBuffer);
+    
+    // Create a device-dependent RGB color space
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    if (!colorSpace)
+    {
+        NSLog(@"CGColorSpaceCreateDeviceRGB failure");
+        return nil;
+    }
+    
+    // Get the base address of the pixel buffer
+    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+    // Get the data size for contiguous planes of the pixel buffer.
+    size_t bufferSize = CVPixelBufferGetDataSize(imageBuffer);
+    
+    // Create a Quartz direct-access data provider that uses data we supply
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, baseAddress, bufferSize,
+                                                              NULL);
+    // Create a bitmap image from data supplied by our data provider
+    CGImageRef cgImage =
+    CGImageCreate(width,
+                  height,
+                  8,
+                  32,
+                  bytesPerRow,
+                  colorSpace,
+                  kCGImageAlphaNoneSkipFirst | kCGBitmapByteOrder32Little,
+                  provider,
+                  NULL,
+                  true,
+                  kCGRenderingIntentDefault);
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpace);
+    
+    // Create and return an image object representing the specified Quartz image
+    UIImage *image = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
+    
+    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    
+    return image;
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
@@ -267,11 +321,20 @@
                 break;
         }
         
+        // Crop image to scan rectangle
+        UIImage *origin_image = [self imageFromSampleBuffer:sampleBuffer];
+        float scaleX = origin_image.size.height / SCREEN_WIDTH;
+        float scaleY = origin_image.size.width / SCREEN_HEIGHT;
+        CGRect cutRect = CGRectMake(m_scanViewY * scaleY, scaleX * (SCREEN_WIDTH - _m_width)/2.0, _m_height * scaleY, _m_width * scaleX);
+        CGImageRef imageRef = CGImageCreateWithImageInRect([origin_image CGImage], cutRect);
+        UIImage *img = [UIImage imageWithCGImage:imageRef];
+        
         FIRVisionImageMetadata *metadata = [[FIRVisionImageMetadata alloc] init];
         metadata.orientation = orientation;
         
         // 这里不仅可以使用buffer初始化，也可以使用 image 进行初始化
-        FIRVisionImage *image = [[FIRVisionImage alloc] initWithBuffer:sampleBuffer];
+        // FIRVisionImage *image = [[FIRVisionImage alloc] initWithBuffer:sampleBuffer];
+        FIRVisionImage *image = [[FIRVisionImage alloc] initWithImage:img];
         image.metadata = metadata;
         
         // 开始识别
@@ -298,7 +361,7 @@
                                                           
                                                           // 播放音效
                                                           NSURL *url=[[NSBundle mainBundle]URLForResource:@"scanSuccess.wav" withExtension:nil];
-                                                          SystemSoundID soundID=8787;
+                                                          SystemSoundID soundID = 8787;
                                                           AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &soundID);
                                                           AudioServicesPlaySystemSound(soundID);
                                                           
